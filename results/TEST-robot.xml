@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="1" skipped="0" tests="1" name="Robot" time="1.166" errors="0">
+<testcase classname="Robot.Tests.LoginTest" name="Acessar pagina da google e pesquisar por praia" time="0.100">
+<failure message="No keyword with name 'Open Browser' found." type="AssertionError"/>
+</testcase>
+</testsuite>
