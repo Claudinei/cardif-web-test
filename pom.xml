@@ -8,49 +8,29 @@
   <artifactId>robot-testes</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <pluginRepositories>
-    <pluginRepository>
-      <id>robotframework-maven-plugin</id>
-      <url>https://raw.github.com/robotframework/mavenplugin/mvnrepo/</url>
-    </pluginRepository>
-  </pluginRepositories>
-
   <build>
     <plugins>
       <plugin>
-        <groupId>org.robotframework</groupId>
-        <artifactId>robotframework-maven-plugin</artifactId>
-        <version>2.1.0</version>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.1.0</version>
         <executions>
           <execution>
             <id>run-robot-tests</id>
             <phase>verify</phase>
             <goals>
-              <goal>run</goal>
+              <goal>exec</goal>
             </goals>
+            <configuration>
+              <executable>/Users/claudineibonilha/projects/env-python/bin/robot</executable>
+              <arguments>
+                <argument>--outputdir</argument>
+                <argument>results</argument>
+                <argument>src/test/robot/tests</argument>
+              </arguments>
+            </configuration>
           </execution>
         </executions>
-        <configuration>
-          <pythonExecutable>/Library/Frameworks/Python.framework/Versions/3.12/bin/python3</pythonExecutable> <!-- ajuste seu python -->
-          <testCasesDirectory>src/test/robot</testCasesDirectory>
-
-          <testCases>
-            <testCase>tests</testCase>
-          </testCases>
-
-          <pythonpathElements>
-            <pythonpathElement>src/test/robot/resources</pythonpathElement>
-          </pythonpathElements>
-
-          <outputDirectory>results</outputDirectory>
-
-          <libdoc>
-            <enabled>false</enabled>
-          </libdoc>
-          <testdoc>
-            <enabled>false</enabled>
-          </testdoc>
-        </configuration>
       </plugin>
     </plugins>
   </build>

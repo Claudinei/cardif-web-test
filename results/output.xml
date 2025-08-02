@@ -1,62 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generator="Robot 4.1 (Jython 2.7.2 on java24.0.1)" schemaversion="2" generated="20250801 17:25:28.302">
-<suite source="/Users/claudineibonilha/projects/cardif/test-web-cardif/src/test/robot" name="Robot" id="s1">
-<suite source="/Users/claudineibonilha/projects/cardif/test-web-cardif/src/test/robot/tests" name="Tests" id="s1-s1">
-<suite source="/Users/claudineibonilha/projects/cardif/test-web-cardif/src/test/robot/tests/LoginTest.robot" name="LoginTest" id="s1-s1-s1">
-<kw type="SETUP" library="LoginSteps" name="Setup WebDriverManager">
-<kw library="OperatingSystem" name="Run">
+<robot generator="Robot 7.3.2 (Python 3.12.3 on darwin)" generated="2025-08-01T21:58:55.891597" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/Users/claudineibonilha/projects/cardif/cardif-web-test/src/test/robot/tests">
+<suite id="s1-s1" name="LoginTest" source="/Users/claudineibonilha/projects/cardif/cardif-web-test/src/test/robot/tests/LoginTest.robot">
+<kw name="Setup WebDriverManager" owner="LoginSteps" type="SETUP">
+<kw name="Run" owner="OperatingSystem">
+<msg time="2025-08-01T21:58:56.166302" level="INFO">Running command 'webdrivermanager chrome --linkpath /Users/claudineibonilha/projects/cardif/cardif-web-test/src/test/robot/resources/steps/drivers 2&gt;&amp;1'.</msg>
 <arg>webdrivermanager chrome --linkpath ${DRIVER_DIR}</arg>
 <doc>Runs the given command in the system and returns the output.</doc>
-<msg level="INFO" timestamp="20250801 17:25:29.315">Running command 'webdrivermanager chrome --linkpath /Users/claudineibonilha/projects/cardif/test-web-cardif/src/test/robot/resources/steps/drivers 2&gt;&amp;1'.</msg>
-<status endtime="20250801 17:25:29.321" starttime="20250801 17:25:29.190" status="PASS"/>
+<status status="PASS" start="2025-08-01T21:58:56.158412" elapsed="0.015574"/>
 </kw>
-<status endtime="20250801 17:25:29.324" starttime="20250801 17:25:29.179" status="PASS"/>
+<status status="PASS" start="2025-08-01T21:58:56.157345" elapsed="0.017117"/>
 </kw>
-<test name="Acessar pagina da google e pesquisar por praia" id="s1-s1-s1-t1">
-<kw library="LoginSteps" name="Acessar a pagina do google">
-<kw name="Open Browser">
+<test id="s1-s1-t1" name="Acessar pagina da google e pesquisar por praia" line="8">
+<kw name="Acessar a pagina do google" owner="LoginSteps">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-01T21:58:56.177827" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
 <arg>url=${URL}</arg>
 <arg>browser=${BROWSER}</arg>
-<msg level="FAIL" timestamp="20250801 17:25:29.383">No keyword with name 'Open Browser' found.</msg>
-<status endtime="20250801 17:25:29.389" starttime="20250801 17:25:29.380" status="FAIL"/>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-01T21:58:56.177135" elapsed="3.230625"/>
 </kw>
-<status endtime="20250801 17:25:29.418" starttime="20250801 17:25:29.336" status="FAIL"/>
+<status status="PASS" start="2025-08-01T21:58:56.176374" elapsed="3.232640"/>
 </kw>
-<kw sourcename="digitar no campo de pesquisa &quot;${role}&quot;" library="LoginSteps" name="digitar no campo de pesquisa &quot;Cardif&quot;">
-<status endtime="20250801 17:25:29.424" starttime="20250801 17:25:29.422" status="NOT RUN"/>
+<kw name="digitar no campo de pesquisa &quot;Cardif&quot;" owner="LoginSteps" source_name="digitar no campo de pesquisa &quot;${role}&quot;">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-01T21:58:59.412403" level="INFO">Typing text 'Cardif' into text field 'id=APjFqb'.</msg>
+<arg>id=APjFqb</arg>
+<arg>${role}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-01T21:58:59.410873" elapsed="0.384782"/>
 </kw>
-<status endtime="20250801 17:25:29.429" starttime="20250801 17:25:29.329" status="FAIL">No keyword with name 'Open Browser' found.</status>
+<status status="PASS" start="2025-08-01T21:58:59.409626" elapsed="0.386220"/>
+</kw>
+<status status="PASS" start="2025-08-01T21:58:56.174722" elapsed="3.621401"/>
 </test>
 <doc>Suite de testes - Pesquisa no google</doc>
-<status endtime="20250801 17:25:29.438" starttime="20250801 17:25:28.879" status="FAIL"/>
+<status status="PASS" start="2025-08-01T21:58:55.932555" elapsed="3.864636"/>
 </suite>
-<status endtime="20250801 17:25:29.470" starttime="20250801 17:25:28.839" status="FAIL"/>
-</suite>
-<status endtime="20250801 17:25:29.499" starttime="20250801 17:25:28.333" status="FAIL"/>
+<status status="PASS" start="2025-08-01T21:58:55.893457" elapsed="3.905647"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" skip="0" fail="1">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" skip="0" fail="1" name="Robot" id="s1">Robot</stat>
-<stat pass="0" skip="0" fail="1" name="Tests" id="s1-s1">Robot.Tests</stat>
-<stat pass="0" skip="0" fail="1" name="LoginTest" id="s1-s1-s1">Robot.Tests.LoginTest</stat>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="LoginTest" id="s1-s1" pass="1" fail="0" skip="0">Tests.LoginTest</stat>
 </suite>
 </statistics>
 <errors>
-<msg level="WARN" timestamp="20250801 17:25:28.111">Command line option --xunitskipnoncritical has been deprecated and has no effect.</msg>
-<msg level="ERROR" timestamp="20250801 17:25:28.955">Error in file '/Users/claudineibonilha/projects/cardif/test-web-cardif/src/test/robot/resources/steps/LoginSteps.resource' on line 2: Importing library 'SeleniumLibrary' failed: ImportError: No module named SeleniumLibrary
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  /Users/claudineibonilha/.m2/repository/org/robotframework/robotframework/4.1/Lib
-  /Users/claudineibonilha/.m2/repository/org/robotframework/robotframework/4.1/robotframework-4.1.jar/Lib
-  __classpath__
-  __pyclasspath__/
-CLASSPATH:
-  /Users/claudineibonilha/tools/apache-maven-3.8.6/boot/plexus-classworlds-2.6.0.jar</msg>
 </errors>
 </robot>
